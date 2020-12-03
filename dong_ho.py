@@ -16,7 +16,7 @@ RED = (255,0,0)
 # khai báo biến
 running = True
 
-#khai báo tạo font chữ 
+# khai báo tạo font chữ và các nút +, -, Start, Reset
 font = pygame.font.SysFont('sans', 50)
 text_1 = font.render('+', True, RED)
 text_2 = font.render('+', True, RED)
@@ -32,8 +32,9 @@ while running:
     screen.fill(GREEN)
 
     mouse_x, mouse_y = pygame.mouse.get_pos()
+    print(mouse_x)
 
-    # vẽ lên 1 hình chữ nhật
+    # vẽ lên 1 hình chữ
     pygame.draw.rect(screen, WHITE, (100,50,50,50))
     pygame.draw.rect(screen, WHITE, (200,50,50,50))
     pygame.draw.rect(screen, WHITE, (300,50,150,50))
@@ -48,6 +49,10 @@ while running:
     screen.blit(text_4, (117,193))
     screen.blit(text_5, (219,193))
     screen.blit(text_6, (313,145))
+    
+    # # vẽ phần số chạy
+    # text_time = font.render(time, True, BLACK)
+    # screen.blit(text_time, (120,120))
 
     # vẽ hình chữ nhật dài cuối
     pygame.draw.rect(screen, BLACK, (50,520,400,50))
